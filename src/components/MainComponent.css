@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	list-style-type: none;
+	outline: 0;
+	transition: 0.3s;
+}
+
+:root {
+	--dark: #272727;
+	--light: #fafaff;
+	--grey: #747474;
+	--darkms: #202020;
+	--darkmslight: #303030;
+
+	--honey: #f8e9a1;
+	--pink: #f76c6c;
+	--light-blue: #a8d0e6;
+	--blue: #374785;
+	--dark-blue: #24305e;
+
+	--yellow: #ffe400;
+	--orange: #ff652f;
+	--green: #14a760;
+}
+
+*::selection {
+	background-color: #add8e6;
+	color: black;
+}
+
+body {
+	font-family: "Karla", sans-serif;
+}

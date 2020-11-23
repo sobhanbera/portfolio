@@ -1,0 +1,113 @@
+:root {
+	--yellow: #ffe400;
+	--orange: #ff652f;
+	--green: #14a760;
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 250px;
+	height: 250px;
+	perspective: 1000px;
+	color: black;
+}
+
+.flip-card-inner {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+	position: relative;
+	color: black;
+}
+
+.flip-card-front,
+.flip-card-back {
+	border-radius: 4px;
+
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background: linear-gradient(110deg, var(--light-blue) 60%, var(--blue) 60%);
+
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	color: black;
+}
+
+.flip-card-front h3 {
+	border-bottom: 2px solid var(--dark);
+	color: inherit;
+	transition: all 1s;
+}
+
+.flip-card-front svg {
+	height: 100px;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.flip-card-front {
+	background-color: #bbb;
+	color: inherit;
+}
+
+.flip-card-back {
+	background-color: #2980b9;
+	color: inherit;
+	transform: rotateY(180deg);
+}
+
+.flip-card-back h2 {
+	/* transform: translateZ(0); */
+	border-bottom: 2px solid var(--dark);
+	color: inherit;
+	font-size: 20px;
+}
+
+.flip-card-back p {
+	padding: 10px;
+	color: inherit;
+	margin: 10px;
+}
+
+.flip-card-inner-android .flip-card-back {
+	transform: rotateX(180deg);
+}
+
+.flip-card-inner-cp .flip-card-back {
+	transform: rotateX(-180deg);
+}
+
+.flip-card:active .flip-card-inner,
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card:active .flip-card-inner-android,
+.flip-card:hover .flip-card-inner-android {
+	transform: rotateX(180deg);
+}
+
+.flip-card:active .flip-card-inner-web,
+.flip-card:hover .flip-card-inner-web {
+	transform: rotateY(-180deg);
+}
+
+.flip-card:active .flip-card-inner-cp,
+.flip-card:hover .flip-card-inner-cp {
+	transform: rotateX(-180deg);
+}
+
+.flip-card:active .flip-card-inner .flip-card-front svg,
+.flip-card:hover .flip-card-inner .flip-card-front svg {
+	position: relative;
+	z-index: 2;
+}

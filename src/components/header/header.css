@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+:root {
+	--dark: #292929;
+	--light: #fafaff;
+}
+
+header {
+	background-color: #f6f6f6;
+	width: 100%;
+	height: 50px;
+	/* border-bottom: 1px solid #bfbfbf; */
+	color: var(--dark);
+	transition: all 0.3s;
+}
+
+.header {
+	width: 850px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+}
+
+.header svg {
+	width: 25px;
+	padding: 15px;
+	margin-left: 10px;
+}
+
+.header h2 {
+	font-size: 18px;
+	font-family: "Fondamento";
+	font-weight: 300;
+	text-transform: capitalize;
+}
+
+.header h2 a {
+	color: inherit;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+
+.header nav ul {
+	display: flex;
+}
+
+.header nav ul li {
+	font-family: "Karla", sans-serif;
+	color: inherit;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	padding: 5px 10px;
+	margin: 5px;
+	transition: all 0.3s;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.header nav ul li a {
+	font-family: "Karla", sans-serif;
+	color: inherit;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.header nav ul li:hover {
+	background-color: rgba(20, 20, 20, 0.1);
+}
+
+.header nav ul li:active {
+	transform: scale(0.9);
+	background-color: rgba(15, 15, 15, 0.2);
+}
+
+.header nav .socials a {
+	cursor: pointer;
+	display: none;
+}
+
+.header .changeTheme {
+	font-size: 14px;
+	color: inherit;
+	transition: all 0.3s;
+	padding: 5px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.header .changeTheme:hover {
+	background-color: rgba(20, 20, 20, 0.1);
+}
+
+.header .changeTheme:active {
+	transform: scale(0.9);
+	background-color: rgba(15, 15, 15, 0.2);
+}
+
+.changeTheme img {
+	margin-right: 5px;
+	width: 15px;
+	height: auto;
+	transition: all 0.3s;
+}
+
+.dark-mode {
+	background-color: var(--dark);
+	color: white;
+	/* border-bottom: 1px solid #adadad; */
+}
+
+.dark-mode .header nav ul li:hover,
+.dark-mode .header .changeTheme:hover {
+	background-color: rgba(50, 50, 50, 1);
+}
+
+.dark-mode .header nav ul li:active,
+.dark-mode .header .changeTheme:active {
+	background-color: rgba(60, 60, 60, 1);
+}
+
+.header .menu-svg {
+	fill: var(--dark);
+	display: none;
+}
+
+.dark-mode .header .menu-svg {
+	fill: var(--light);
+}
+
+@media screen and (max-width: 900px) {
+	.header .changeTheme span {
+		display: none;
+	}
+	.header {
+		width: 100%;
+	}
+	.header h2 {
+		margin-left: 15px;
+	}
+
+	.header .changeTheme {
+		padding: 5px;
+		border-radius: 50%;
+	}
+
+	.changeTheme img {
+		padding: 5px;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.changeTheme img {
+		padding: 5px;
+		border-radius: 50%;
+		margin-right: 0;
+	}
+
+	nav {
+		left: -150%;
+		position: absolute;
+		top: 50px; /* this is the height of header element*/
+		background-color: #efefef;
+		transition: all cubic-bezier(0, 1.57, 5s, 1.55s);
+		width: 55%;
+		height: 100%;
+	}
+
+	.header .menu-svg {
+		cursor: pointer;
+		display: inline-block;
+	}
+
+	.header .menu-svg:hover ~ nav,
+	.header .menu-svg:active ~ nav,
+	nav:hover {
+		left: 0;
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header nav ul li {
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		transition: all 0.3s;
+		border-radius: 8px;
+		cursor: pointer;
+		border-radius: 0;
+		padding: 10px 15px;
+		margin: 0;
+		border-bottom: 1px solid #cfcfcf;
+	}
+
+	.header nav ul li:hover {
+		background-color: rgba(20, 20, 20, 0.1);
+		border-bottom: 1px solid #aaaaaa;
+	}
+
+	.header nav ul li:active {
+		transform: scale(0.9);
+		background-color: rgba(15, 15, 15, 0.2);
+	}
+
+	.dark-mode .header nav {
+		background-color: rgba(50, 50, 50, 1);
+	}
+
+	.dark-mode .header nav ul li {
+		border-bottom: 1px solid #606060;
+	}
+	.dark-mode .header nav ul li:hover,
+	.dark-mode .header nav ul li:active {
+		border-bottom: 1px solid #aaaaaa;
+		background-color: rgba(60, 60, 60, 1);
+	}
+
+	.header nav .socials {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		margin-top: 30px;
+	}
+	.header nav .socials2 {
+		margin-top: 0px;
+	}
+
+	.header nav .socials a {
+		display: flex;
+		cursor: pointer;
+	}
+
+	.header nav .socials a svg {
+		fill: var(--dark);
+		width: 35px;
+		height: auto;
+		transition: all 0.4s;
+	}
+
+	.dark-mode nav .socials a svg {
+		fill: var(--light);
+	}
+
+	nav .socials a svg:active {
+		transform: scale(0.9);
+	}
+
+	.header h2 {
+		font-size: 19px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	nav {
+		width: 65%;
+	}
+	.header h2 {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	nav {
+		width: 70%;
+	}
+}
+
+/* MY PHONE's width is 360px so this below line */
+@media screen and (max-width: 362px) {
+	nav {
+		width: 80%;
+	}
+}
+
+/* For very old phone sizes */
+@media screen and (max-width: 350px) {
+	nav {
+		width: 100%;
+	}
+}

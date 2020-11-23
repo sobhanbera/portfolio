@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+:root {
+	--darkms: #202020;
+	--darkmslight: #303030;
+	--darktf: #202020;
+	--light: #fafaff;
+
+	--yellow: #ffe400;
+	--orange: #ff652f;
+	--green: #14a760;
+
+	--honey: #f8e9a1;
+	--pink: #f76c6c;
+	--light-blue: #a8d0e6;
+	--blue: #374785;
+	--dark-blue: #243079;
+	--linearandroid: linear-gradient(
+		background:
+			linear-gradient(
+				to border-bottom,
+				var(--dark-scroll) 50%,
+				var(--light-scroll) 100%
+			)
+			;
+	);
+}
+
+.main-about.dark {
+	background-color: var(--darkmslight);
+}
+
+.main-about {
+	padding-top: 50px;
+	padding-bottom: 70px;
+	background-color: var(--honey);
+}
+
+.main-about .flip-card .flip-card-inner .flip-card-front,
+.main-about .flip-card .flip-card-inner .flip-card-back {
+	z-index: 1;
+	background: linear-gradient(110deg, var(--light-blue) 60%, var(--blue) 60%);
+}
+
+.main-about.dark .flip-card .flip-card-inner .flip-card-front,
+.main-about.dark .flip-card .flip-card-inner .flip-card-back {
+	background: linear-gradient(
+		110deg,
+		var(--darkms) 60%,
+		var(--darkmslight) 60%
+	);
+	color: var(--yellow);
+	/* background: linear-gradient(110deg, var(--light-blue) 60%, var(--blue) 60%); */
+}
+
+.main-about.dark .flip-card .flip-card-inner .flip-card-front h3 {
+	border-bottom: 2px solid var(--yellow);
+}
+
+.main-about.dark .flip-card .flip-card-inner .flip-card-back h2 {
+	border-bottom: 2px solid var(--yellow);
+}
+
+.main-about.dark .flip-card .flip-card-inner .flip-card-front svg {
+	fill: var(--yellow);
+}
+
+/* .main-about.dark .flip-card .flip-card-inner .flip-card-front svg {
+	animation-name: skills-svgs;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: both;
+}
+
+@keyframes skills-svgs {
+	0% {
+		fill: rgb(255, 0, 0);
+	}
+	20% {
+		fill: rgb(0, 0, 255);
+	}
+	40% {
+		fill: rgb(60, 179, 113);
+	}
+	60% {
+		fill: rgb(238, 130, 238);
+	}
+	80% {
+		fill: rgb(255, 165, 0);
+	}
+	100% {
+		fill: rgb(106, 90, 205);
+	}
+} */
+
+.main-about .about-card-holder {
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.main-about .about-card-holder .card-holder {
+	padding: 10px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-about .about-card-holder .card-holder .skill-scroll {
+	width: 230px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* filter: blur(3px); */
+	background-color: rgba(215, 215, 215, 1);
+}
+
+.main-about.dark .about-card-holder .card-holder .skill-scroll {
+	background-color: rgba(42, 42, 42, 1);
+}
+
+@media screen and (max-width: 900px) {
+	.main-about .about-card-holder {
+		flex-direction: column;
+	}
+}
+
+.main-about .about-card-holder .card-holder .skill-scroll .skill-level {
+	width: 90%;
+	height: 35%;
+	transition: all 0.5s;
+	background-color: var(--dark-blue);
+	border-radius: 10px;
+	background-color: var(--light-blue);
+}
+.main-about.dark .about-card-holder .card-holder .skill-scroll .skill-level {
+	background-color: rgba(55, 55, 55, 1);
+}
+
+.main-about .about-card-holder .card-holder .skill-scroll .skill-level:hover {
+	transform: scale(1.05);
+}
+
+.main-about .about-card-holder .card-holder .skill-scroll:hover {
+	transform: scale(1.03);
+}
+
+.main-about
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress {
+	background-color: var(--blue);
+	height: 100%;
+	width: 80%;
+	border-radius: inherit;
+}
+
+.main-about.dark
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress {
+	background-color: var(--yellow);
+}
+
+.main-about
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress-android {
+	width: 33%;
+}
+
+.main-about
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress-web {
+	width: 57%;
+}
+
+.main-about
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress-java {
+	width: 64%;
+}
+
+.main-about
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress-python {
+	width: 25%;
+}
+
+.main-about
+	.about-card-holder
+	.card-holder
+	.skill-scroll
+	.skill-level
+	.level-progress-cp {
+	width: 21%;
+}
