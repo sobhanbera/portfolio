@@ -1,0 +1,52 @@
+:root {
+	--dark: #272727;
+	--light: #fafaff;
+	--grey: #747474;
+	--darkms: #202020;
+	--darkmslight: #303030;
+
+	--honey: #f8e9a1;
+	--pink: #f76c6c;
+	--light-blue: #a8d0e6;
+	--blue: #374785;
+	--dark-blue: #24305e;
+
+	--yellow: #ffe400;
+	--orange: #ff652f;
+	--green: #14a760;
+}
+
+.main-about {
+	height: 120vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
+	background-image: url("../../assets/imgs/coding.jpg");
+}
+
+.main-about .about-starts {
+	display: inline-block;
+	perspective: 1800px;
+	transform-origin: 50% 50%;
+	transform-style: preserve-3d;
+	transform: rotateX(11deg) rotateY(16.5deg);
+	background: transparent;
+	backdrop-filter: blur(2px);
+	border-radius: 5px;
+	border: 1px solid white;
+	width: 200px;
+	height: 200px;
+}
+
+.main-about .about-starts .test-parallax {
+	perspective: 1200px;
+	width: 50px;
+	height: 50px;
+	background: yellowgreen;
+	overflow: hidden;
+}
