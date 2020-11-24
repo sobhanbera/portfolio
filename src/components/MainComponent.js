@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import "./MainComponent.css";
 
 import ChildErrorBoundary from "./ErrorBoundary/ChildErrorBoundary";
@@ -10,7 +10,6 @@ import Contact from "./contact/Contact";
 import Cursor from "./cursor/Cursor";
 import Loader from "./loader/Loader";
 import AboutSection from "./about/AboutSection";
-import ErrorPopUp from "./popup/ErrorPopUp";
 
 class Main extends Component {
 	constructor() {

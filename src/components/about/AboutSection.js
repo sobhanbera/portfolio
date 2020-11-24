@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutSection.css";
-import MyImage from "../../assets/imgs/android.png";
+// import MyImage from "../../assets/imgs/android.png";
 
 const About = (props) => {
 	return (

@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React from "react";
 import "./Marquee.css";
 
 const Marquee = (props) => {
