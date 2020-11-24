@@ -12,8 +12,8 @@ import {
 const About = (props) => {
 	// backText='I am a web developer from an year. I have created many web application using Javascript, HTML, CSS, Sass, Bootstrap, ReactJS framework, Firebase, APIs, etc.'>
 	return (
-		<div id='skills' className={`main-about ${props.theme}`}>
-			<div className='about-card-holder'>
+		<div id='skills' className={`main-skill ${props.theme}`}>
+			<div className='skill-card-holder'>
 				<div className='card-holder'>
 					<AndroidCard />
 					<div className='skill-scroll'>
@@ -23,7 +23,7 @@ const About = (props) => {
 					</div>
 				</div>
 			</div>
-			<div className='about-card-holder'>
+			<div className='skill-card-holder'>
 				<div className='card-holder'>
 					<WebCard />
 					<div className='skill-scroll'>
@@ -49,7 +49,7 @@ const About = (props) => {
 					</div>
 				</div>
 			</div>
-			<div className='about-card-holder'>
+			<div className='skill-card-holder'>
 				<div className='card-holder'>
 					<CompetitivePCard />
 					<div className='skill-scroll'>

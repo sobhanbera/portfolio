@@ -31,24 +31,30 @@
 	);
 }
 
-.main-about.dark {
+.main-skill.dark {
 	background-color: var(--darkmslight);
 }
 
-.main-about {
+.main-skill {
+	height: 1000px;
 	padding-top: 50px;
 	padding-bottom: 70px;
 	background-color: var(--honey);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
 }
 
-.main-about .flip-card .flip-card-inner .flip-card-front,
-.main-about .flip-card .flip-card-inner .flip-card-back {
+.main-skill .flip-card .flip-card-inner .flip-card-front,
+.main-skill .flip-card .flip-card-inner .flip-card-back {
 	z-index: 1;
 	background: linear-gradient(110deg, var(--light-blue) 60%, var(--blue) 60%);
 }
 
-.main-about.dark .flip-card .flip-card-inner .flip-card-front,
-.main-about.dark .flip-card .flip-card-inner .flip-card-back {
+.main-skill.dark .flip-card .flip-card-inner .flip-card-front,
+.main-skill.dark .flip-card .flip-card-inner .flip-card-back {
 	background: linear-gradient(
 		110deg,
 		var(--darkms) 60%,
@@ -58,19 +64,19 @@
 	/* background: linear-gradient(110deg, var(--light-blue) 60%, var(--blue) 60%); */
 }
 
-.main-about.dark .flip-card .flip-card-inner .flip-card-front h3 {
+.main-skill.dark .flip-card .flip-card-inner .flip-card-front h3 {
 	border-bottom: 2px solid var(--yellow);
 }
 
-.main-about.dark .flip-card .flip-card-inner .flip-card-back h2 {
+.main-skill.dark .flip-card .flip-card-inner .flip-card-back h2 {
 	border-bottom: 2px solid var(--yellow);
 }
 
-.main-about.dark .flip-card .flip-card-inner .flip-card-front svg {
+.main-skill.dark .flip-card .flip-card-inner .flip-card-front svg {
 	fill: var(--yellow);
 }
 
-/* .main-about.dark .flip-card .flip-card-inner .flip-card-front svg {
+/* .main-skill.dark .flip-card .flip-card-inner .flip-card-front svg {
 	animation-name: skills-svgs;
 	animation-duration: 1s;
 	animation-delay: 0s;
@@ -100,20 +106,20 @@
 	}
 } */
 
-.main-about .about-card-holder {
+.main-skill .skill-card-holder {
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 }
 
-.main-about .about-card-holder .card-holder {
+.main-skill .skill-card-holder .card-holder {
 	padding: 10px 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.main-about .about-card-holder .card-holder .skill-scroll {
+.main-skill .skill-card-holder .card-holder .skill-scroll {
 	width: 230px;
 	height: 40px;
 	margin-top: 10px;
@@ -125,17 +131,20 @@
 	background-color: rgba(215, 215, 215, 1);
 }
 
-.main-about.dark .about-card-holder .card-holder .skill-scroll {
+.main-skill.dark .skill-card-holder .card-holder .skill-scroll {
 	background-color: rgba(42, 42, 42, 1);
 }
 
 @media screen and (max-width: 900px) {
-	.main-about .about-card-holder {
+	.main-skill {
+		height: max-content;
+	}
+	.main-skill .skill-card-holder {
 		flex-direction: column;
 	}
 }
 
-.main-about .about-card-holder .card-holder .skill-scroll .skill-level {
+.main-skill .skill-card-holder .card-holder .skill-scroll .skill-level {
 	width: 90%;
 	height: 35%;
 	transition: all 0.5s;
@@ -143,20 +152,20 @@
 	border-radius: 10px;
 	background-color: var(--light-blue);
 }
-.main-about.dark .about-card-holder .card-holder .skill-scroll .skill-level {
+.main-skill.dark .skill-card-holder .card-holder .skill-scroll .skill-level {
 	background-color: rgba(55, 55, 55, 1);
 }
 
-.main-about .about-card-holder .card-holder .skill-scroll .skill-level:hover {
+.main-skill .skill-card-holder .card-holder .skill-scroll .skill-level:hover {
 	transform: scale(1.05);
 }
 
-.main-about .about-card-holder .card-holder .skill-scroll:hover {
+.main-skill .skill-card-holder .card-holder .skill-scroll:hover {
 	transform: scale(1.03);
 }
 
-.main-about
-	.about-card-holder
+.main-skill
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
@@ -167,56 +176,97 @@
 	border-radius: inherit;
 }
 
-.main-about.dark
-	.about-card-holder
+.main-skill.dark
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
 	.level-progress {
 	background-color: var(--yellow);
+	/* animation-name: gradualy-increase-level;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite; */
 }
 
-.main-about
-	.about-card-holder
+.main-skill
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
 	.level-progress-android {
-	width: 33%;
+	max-width: 33%;
+	animation-name: gradualy-increase-level;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
 }
 
-.main-about
-	.about-card-holder
+.main-skill
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
 	.level-progress-web {
-	width: 57%;
+	max-width: 57%;
+	animation-name: gradualy-increase-level;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
 }
 
-.main-about
-	.about-card-holder
+.main-skill
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
 	.level-progress-java {
-	width: 64%;
+	max-width: 64%;
+	animation-name: gradualy-increase-level;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
 }
 
-.main-about
-	.about-card-holder
+.main-skill
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
 	.level-progress-python {
-	width: 25%;
+	max-width: 25%;
+	animation-name: gradualy-increase-level;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
 }
 
-.main-about
-	.about-card-holder
+.main-skill
+	.skill-card-holder
 	.card-holder
 	.skill-scroll
 	.skill-level
 	.level-progress-cp {
-	width: 21%;
+	max-width: 21%;
+	animation-name: gradualy-increase-level;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
+}
+
+@keyframes gradualy-increase-level {
+	0% {
+		width: 0%;
+		border-radius: 1px;
+	}
+	100% {
+		width: 100%;
+		border-radius: 12px;
+	}
 }
