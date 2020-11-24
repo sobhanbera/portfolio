@@ -1,24 +1,94 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import firebase from "../../firebase/Firebase";
+// import emailjs from "emailjs-com";
 
 const Contact = (props) => {
+	const emailValidator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	const [email, setEmail] = useState("");
 	const [name, setName] = useState("");
 	const [message, setMessage] = useState("");
 
 	const emailChange = (event) => {
 		setEmail(event.target.value);
-		console.log(email);
 	};
 
 	const nameChange = (event) => {
 		setName(event.target.value);
-		console.log(email);
 	};
 
 	const messageChange = (event) => {
 		setMessage(event.target.value);
-		console.log(email);
+	};
+
+	const addContactMessage = (event) => {
+		if (email === "" || name === "" || message === "") {
+			alert(
+				"All Field Are Required. Please Provide All Field to send a contact message."
+			);
+			return;
+		}
+
+		if (message.length < 100 || message.length > 500) {
+			alert(
+				"Length of the message should be between 101 to 500 character."
+			);
+			return;
+		}
+
+		if (!email.match(emailValidator)) {
+			alert(
+				"Please Enter a valid email id to contact. Your email should match this regex pattern: ^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$"
+			);
+			return;
+		}
+
+		// let spaces = 0;
+		// let spacesIndex = [];
+		// for (let i = 0; i < message.length; ++i) {
+		// 	if (message.charAt(i) === " ") {
+		// 		spaces++;
+		// 		spacesIndex.push(i);
+		// 	}
+		// }
+
+		// if (spaces < 32) {
+		// 	alert("Please enter a valid message.");
+		// 	return;
+		// }
+
+		// for (let i = 1; i < spaces; ++i) {
+		// 	if (spacesIndex[i] === spacesIndex[i - 1] + 1) {
+		// 		alert(
+		// 			"Extra spaces between words are not allowed. Please Try Again!"
+		// 		);
+		// 		return;
+		// 	}
+		// }
+
+		const currDate = new Date();
+		const time = `${currDate.getHours()}:${currDate.getMinutes()}:${currDate.getSeconds()}`;
+		const date = `${currDate.getDate()}-${currDate.getMonth()}-${currDate.getFullYear()}`;
+		const timestamp = `${currDate.getTime()}`;
+		console.log(time, date, timestamp);
+
+		const database = firebase.firestore();
+		database.settings({
+			timestampsInSnapshots: true,
+		});
+		database.collection("Contact_Messages").add({
+			time: time,
+			date: date,
+			timestamp: timestamp,
+			name: name,
+			email: email,
+			message: message,
+		});
+
+		alert("Thanks For Contacting.");
+		setEmail("");
+		setMessage("");
+		setName("");
 	};
 
 	return (
@@ -46,7 +116,7 @@ const Contact = (props) => {
 					value={message}
 					onChange={messageChange}
 				/>
-				<button>Submit</button>
+				<button onClick={addContactMessage}>Submit</button>
 			</div>
 			<div className='contact-text'>
 				<ul>

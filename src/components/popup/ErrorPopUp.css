@@ -1,0 +1,22 @@
+.error-pop-up {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0%;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+}
+
+.error-pop-up.disable {
+}
+
+.error-pop-up svg {
+	width: 30px;
+	cursor: pointer;
+}
+
+.error-pop-up svg:active .error-pop-up,
+.error-pop-up svg:focus .error-pop-up {
+	display: none;
+}

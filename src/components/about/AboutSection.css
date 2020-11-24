@@ -17,36 +17,101 @@
 }
 
 .main-about {
+	color: white;
 	height: 120vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 500px;
+	min-height: 600px;
 	background-image: url("../../assets/imgs/coding.jpg");
+	text-align: center;
 }
 
-.main-about .about-starts {
-	display: inline-block;
-	perspective: 1800px;
-	transform-origin: 50% 50%;
-	transform-style: preserve-3d;
-	transform: rotateX(11deg) rotateY(16.5deg);
-	background: transparent;
-	backdrop-filter: blur(2px);
-	border-radius: 5px;
+.blur-background {
+	height: 100%;
+	width: 100%;
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.semi-card {
+	font-family: "Poppins", sans-serif;
+	width: 50%;
+	height: 40%;
 	border: 1px solid white;
-	width: 200px;
-	height: 200px;
+	border-radius: 5px;
+	overflow: scroll;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(24, 24, 24, 0.7);
 }
 
-.main-about .about-starts .test-parallax {
-	perspective: 1200px;
-	width: 50px;
-	height: 50px;
-	background: yellowgreen;
-	overflow: hidden;
+.semi-card h3 {
+	font-size: 16px;
+	padding: 3px;
+	margin: 5px;
+	/* border-radius: 5px; */
+	border-bottom: 2px solid white;
+	margin: 5px 25%;
+}
+
+.semi-card p {
+	font-size: 14px;
+	margin: 5px 12%;
+	text-align: start;
+	margin-top: 15px;
+}
+
+.semi-card h4 {
+	border-bottom: 1px solid white;
+	margin: 15px 40%;
+	margin-top: 20px;
+	margin-bottom: 1px;
+}
+
+@media screen and (max-width: 900px) {
+	.semi-card {
+		width: 75%;
+	}
+	.semi-card p {
+		margin: 5px 5%;
+	}
+	.semi-card h4 {
+		margin: 15px 30%;
+		margin-top: 20px;
+		margin-bottom: 1px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.semi-card p {
+		margin: 10px 2%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.semi-card {
+		width: 90%;
+	}
+}
+
+.main-about.dark {
+	color: var(--yellow);
+}
+
+.blur-background.dark {
+	backdrop-filter: grayscale() blur(3px);
+}
+
+.blur-background.dark .semi-card {
+	border: 1px solid var(--orange);
+}
+
+.blur-background.dark .semi-card h3,
+.blur-background.dark .semi-card h4 {
+	color: var(--orange);
+	border-bottom: 1px solid var(--orange);
 }
