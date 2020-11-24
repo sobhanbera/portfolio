@@ -44,28 +44,35 @@
 	</body>
 
 	<script>
-		// let cursor = document.querySelector("#cursor");
-		// document.addEventListener("mousemove", (event) => {
-		// 	cursor.style.top = event.pageY + "px";
-		// 	cursor.style.left = event.pageX + "px";
-		// });
+		const cards = document.querySelector(".about-starts");
+		const range = 40;
+		const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1); // thanks @alice-mx
+		let timeout;
+		document.addEventListener(
+			"mousemove",
+			({ x, y }) => {
+				if (timeout) {
+					window.cancelAnimationFrame(timeout);
+				}
+
+				timeout = window.requestAnimationFrame(() => {
+					const yValue = calcValue(y, window.innerHeight);
+					const xValue = calcValue(x, window.innerWidth);
+
+					cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+				});
+			},
+			false
+		);
 
 		const CURSOR = document.querySelector(".cursorBlob");
 		const marquee = document.querySelectorAll(".marquee");
-
 		const setCursorPos = (e) => {
 			const { pageX: posX, pageY: posY } = e;
 			CURSOR.style.top = `${posY - CURSOR.offsetHeight / 2}px`;
 			CURSOR.style.left = `${posX - CURSOR.offsetWidth / 2}px`;
 		};
-		const setCursorPos2 = (e) => {
-			const { pageX: posX, pageY: posY } = e;
-			CURSOR.style.top = `${posY - CURSOR.offsetHeight / 2}px`;
-			CURSOR.style.left = `${posX - CURSOR.offsetWidth / 2}px`;
-		};
-
 		document.addEventListener("mousemove", setCursorPos);
-		document.addEventListener("mousemove", setCursorPos2);
 		const setCursorHover = () => {
 			CURSOR.style.width = "50px";
 			CURSOR.style.height = "50px";
@@ -74,7 +81,6 @@
 		const removeCursorHover = () => {
 			CURSOR.style.transform = "scale(0)";
 		};
-
 		marquee.forEach((link) => {
 			link.addEventListener("mouseover", setCursorHover);
 		});
