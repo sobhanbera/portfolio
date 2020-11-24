@@ -1,0 +1,57 @@
+:root {
+	--dark: #272727;
+	--light: #fafaff;
+	--grey: #747474;
+	--darkms: #202020;
+	--darkmslight: #303030;
+
+	--honey: #f8e9a1;
+	--pink: #f76c6c;
+	--light-blue: #a8d0e6;
+	--blue: #374785;
+	--dark-blue: #24305e;
+
+	--yellow: #ffe400;
+	--orange: #ff652f;
+	--green: #14a760;
+}
+
+.loader-wrapper {
+	position: fixed;
+	top: 0;
+	transition: all 2s;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(24, 30, 95, 0.91);
+	backdrop-filter: blur(3px);
+}
+
+.loader-wrapper .main-loader {
+	width: 100px;
+	height: 100px;
+	margin: 100px auto;
+	background-color: rgba(230, 230, 246, 0.8);
+
+	border-radius: 100%;
+	animation: sk-scaleout 1s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes sk-scaleout {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
