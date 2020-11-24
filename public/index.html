@@ -40,31 +40,9 @@
 		<div id="root"></div>
 
 		<div class="progressbar"></div>
-		<!-- <div id="cursor"></div> -->
 	</body>
 
 	<script>
-		const cards = document.querySelector(".about-starts");
-		const range = 40;
-		const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1); // thanks @alice-mx
-		let timeout;
-		document.addEventListener(
-			"mousemove",
-			({ x, y }) => {
-				if (timeout) {
-					window.cancelAnimationFrame(timeout);
-				}
-
-				timeout = window.requestAnimationFrame(() => {
-					const yValue = calcValue(y, window.innerHeight);
-					const xValue = calcValue(x, window.innerWidth);
-
-					cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
-				});
-			},
-			false
-		);
-
 		const CURSOR = document.querySelector(".cursorBlob");
 		const marquee = document.querySelectorAll(".marquee");
 		const setCursorPos = (e) => {
