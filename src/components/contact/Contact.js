@@ -29,9 +29,9 @@ const Contact = (props) => {
 			return;
 		}
 
-		if (message.length < 100 || message.length > 500) {
+		if (message.length < 0 || message.length > 1024) {
 			alert(
-				"Length of the message should be between 101 to 500 character."
+				"Length of the message should be between 1 to 1024 character."
 			);
 			return;
 		}
