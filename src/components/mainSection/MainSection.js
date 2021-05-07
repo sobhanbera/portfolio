@@ -12,7 +12,7 @@ const MainSection = props => {
 		// 	console.group('Thanks for visiting. Explore The Website');
 		// }, 500);
 
-		fetch('https://github.com/sobhanbera/portfolio/blob/master/src/assets/files/sobhanbera.pdf?raw')
+		fetch('https://raw.githubusercontent.com/sobhanbera/portfolio/67ab3c9d972aa94bded510a1cddcdbbf85d887f8/src/assets/files/sobhanbera.pdf')
 			.then(res => {
 				res
 					.blob()
@@ -20,7 +20,7 @@ const MainSection = props => {
 						let url = window.URL.createObjectURL(blob);
 						let a = document.createElement('a');
 						a.href = url;
-						a.download = 'sobhan-bera.pdf';
+						a.download = "Sobhan Bera's CV.pdf";
 						a.click();
 					})
 					.catch(err => {});
