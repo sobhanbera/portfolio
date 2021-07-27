@@ -196,7 +196,7 @@
 	.skill-scroll
 	.skill-level
 	.level-progress-android {
-	max-width: 33%;
+	max-width: 63%;
 	animation-name: gradualy-increase-level;
 	animation-delay: 5s;
 	animation-duration: 5s;
@@ -210,7 +210,7 @@
 	.skill-scroll
 	.skill-level
 	.level-progress-web {
-	max-width: 57%;
+	max-width: 67%;
 	animation-name: gradualy-increase-level;
 	animation-delay: 5s;
 	animation-duration: 5s;
@@ -224,7 +224,7 @@
 	.skill-scroll
 	.skill-level
 	.level-progress-java {
-	max-width: 64%;
+	max-width: 45%;
 	animation-name: gradualy-increase-level;
 	animation-delay: 5s;
 	animation-duration: 5s;
@@ -238,7 +238,7 @@
 	.skill-scroll
 	.skill-level
 	.level-progress-python {
-	max-width: 25%;
+	max-width: 35%;
 	animation-name: gradualy-increase-level;
 	animation-delay: 5s;
 	animation-duration: 5s;
@@ -252,7 +252,7 @@
 	.skill-scroll
 	.skill-level
 	.level-progress-cp {
-	max-width: 21%;
+	max-width: 35%;
 	animation-name: gradualy-increase-level;
 	animation-delay: 5s;
 	animation-duration: 5s;
