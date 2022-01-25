@@ -59,7 +59,7 @@ const Header = (props) => {
 							<a href='#skills'>Skills</a>
 						</li>
 						<li>
-							<a href='#projects'>Projects</a>
+							<a href='https://sobhanblogs.vercel.app' target='_blank' rel="noreferrer">Blogs</a>
 						</li>
 						<li>
 							<a href='#contactme'>Contact</a>
