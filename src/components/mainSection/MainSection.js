@@ -15,7 +15,7 @@ const MainSection = (props) => {
     // }, 500);
 
     fetch(
-      "https://github.com/sobhanbera/portfolio/blob/master/src/assets/files/Sobhan%20Bera's%20Resume.pdf"
+      "https://raw.githubusercontent.com/sobhanbera/portfolio/7be9c517da29480307065c667ddea11d25fc27ed/src/assets/files/Sobhan%20Bera's%20Resume.pdf"
     )
       .then((res) => {
         res
